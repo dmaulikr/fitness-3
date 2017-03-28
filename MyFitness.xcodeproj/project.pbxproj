@@ -14,6 +14,10 @@
 		FA2CA38F1E8A558400F4A764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2CA38E1E8A558400F4A764 /* Assets.xcassets */; };
 		FA2CA3921E8A558400F4A764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2CA3901E8A558400F4A764 /* LaunchScreen.storyboard */; };
 		FA2CA39D1E8A558400F4A764 /* MyFitnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA39C1E8A558400F4A764 /* MyFitnessTests.swift */; };
+		FA2CA3AB1E8A564700F4A764 /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3A71E8A564700F4A764 /* Exercise+CoreDataClass.swift */; };
+		FA2CA3AC1E8A564700F4A764 /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3A81E8A564700F4A764 /* Exercise+CoreDataProperties.swift */; };
+		FA2CA3AD1E8A564700F4A764 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3A91E8A564700F4A764 /* Workout+CoreDataClass.swift */; };
+		FA2CA3AE1E8A564700F4A764 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3AA1E8A564700F4A764 /* Workout+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		FA2CA3981E8A558400F4A764 /* MyFitnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFitnessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2CA39C1E8A558400F4A764 /* MyFitnessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFitnessTests.swift; sourceTree = "<group>"; };
 		FA2CA39E1E8A558400F4A764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA2CA3A71E8A564700F4A764 /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA2CA3A81E8A564700F4A764 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA2CA3A91E8A564700F4A764 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA2CA3AA1E8A564700F4A764 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +90,8 @@
 				FA2CA3841E8A558400F4A764 /* AppDelegate.swift */,
 				FA2CA3861E8A558400F4A764 /* ViewController.swift */,
 				FA2CA3881E8A558400F4A764 /* Main.storyboard */,
-				FA2CA38E1E8A558400F4A764 /* Assets.xcassets */,
-				FA2CA3901E8A558400F4A764 /* LaunchScreen.storyboard */,
-				FA2CA3931E8A558400F4A764 /* Info.plist */,
+				FA2CA3AF1E8A56BD00F4A764 /* Models */,
+				FA2CA3B01E8A56DB00F4A764 /* SupportFiles */,
 				FA2CA38B1E8A558400F4A764 /* MyFitness.xcdatamodeld */,
 			);
 			path = MyFitness;
@@ -97,6 +104,28 @@
 				FA2CA39E1E8A558400F4A764 /* Info.plist */,
 			);
 			path = MyFitnessTests;
+			sourceTree = "<group>";
+		};
+		FA2CA3AF1E8A56BD00F4A764 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA2CA3A71E8A564700F4A764 /* Exercise+CoreDataClass.swift */,
+				FA2CA3A81E8A564700F4A764 /* Exercise+CoreDataProperties.swift */,
+				FA2CA3A91E8A564700F4A764 /* Workout+CoreDataClass.swift */,
+				FA2CA3AA1E8A564700F4A764 /* Workout+CoreDataProperties.swift */,
+			);
+			name = Models;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FA2CA3B01E8A56DB00F4A764 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FA2CA38E1E8A558400F4A764 /* Assets.xcassets */,
+				FA2CA3901E8A558400F4A764 /* LaunchScreen.storyboard */,
+				FA2CA3931E8A558400F4A764 /* Info.plist */,
+			);
+			name = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2CA3871E8A558400F4A764 /* ViewController.swift in Sources */,
+				FA2CA3AD1E8A564700F4A764 /* Workout+CoreDataClass.swift in Sources */,
 				FA2CA38D1E8A558400F4A764 /* MyFitness.xcdatamodeld in Sources */,
+				FA2CA3AC1E8A564700F4A764 /* Exercise+CoreDataProperties.swift in Sources */,
+				FA2CA3AE1E8A564700F4A764 /* Workout+CoreDataProperties.swift in Sources */,
 				FA2CA3851E8A558400F4A764 /* AppDelegate.swift in Sources */,
+				FA2CA3AB1E8A564700F4A764 /* Exercise+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
