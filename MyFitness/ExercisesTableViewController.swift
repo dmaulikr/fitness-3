@@ -15,28 +15,20 @@ class ExercisesTableViewController: UITableViewController {
     
     lazy var fetchResultsController: NSFetchedResultsController = { () -> NSFetchedResultsController<Exercise> in 
         let fetchRequest: NSFetchRequest<Exercise> = Exercise.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title.date", ascending: false)]
         let context = DBController.getContext()
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         return frc
     }()
     
-    
-    
-    
-    
-    
-    
-    
-    
-
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        do {
+            try fetchResultsController.performFetch()
+        } catch let error {
+            print (error)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,23 +40,30 @@ class ExercisesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
+        if let count = fetchResultsController.sections?[section].numberOfObjects {
+            return count
+        }
+        
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ExerciseTableViewCell
 
-        // Configure the cell...
+        let exercise = fetchResultsController.object(at: indexPath) 
 
+        cell.picture.image = UIImage(named: exercise.pictureTitle!)
+        cell.titleLabel.text = exercise.title
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

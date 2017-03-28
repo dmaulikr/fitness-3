@@ -23,16 +23,16 @@ class ViewController: UIViewController {
         
 //        let exercise: Exercise = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: DBController.getContext()) as! Exercise
 //        
-//                exercise.specification = "Try with second name added"
-//                exercise.pictureTitle = "img5.png"
-//                exercise.title = "doSmth"
-//        
+//                exercise.specification = "You need to do 10 push ups"
+//                exercise.pictureTitle = "img3.png"
+//                exercise.title = "Push-Ups"
+//
 //        let workout: Workout = NSEntityDescription.insertNewObject(forEntityName: "Workout", into: DBController.getContext()) as! Workout
 //        
 //                workout.title = "Chest2"
 //                workout.addToExercises(exercise)
 //        
-//                DBController.saveContext()
+                DBController.saveContext()
         
     }
 
