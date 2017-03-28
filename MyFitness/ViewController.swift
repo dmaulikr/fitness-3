@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -14,7 +15,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+         print (documentsPath)
         
+        
+        
+        
+//        let exercise: Exercise = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: DBController.getContext()) as! Exercise
+//        
+//                exercise.specification = "Try with second name added"
+//                exercise.pictureTitle = "img5.png"
+//                exercise.title = "doSmth"
+//        
+//        let workout: Workout = NSEntityDescription.insertNewObject(forEntityName: "Workout", into: DBController.getContext()) as! Workout
+//        
+//                workout.title = "Chest2"
+//                workout.addToExercises(exercise)
+//        
+//                DBController.saveContext()
         
     }
 

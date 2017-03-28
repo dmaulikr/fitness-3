@@ -18,6 +18,8 @@
 		FA2CA3AC1E8A564700F4A764 /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3A81E8A564700F4A764 /* Exercise+CoreDataProperties.swift */; };
 		FA2CA3AD1E8A564700F4A764 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3A91E8A564700F4A764 /* Workout+CoreDataClass.swift */; };
 		FA2CA3AE1E8A564700F4A764 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3AA1E8A564700F4A764 /* Workout+CoreDataProperties.swift */; };
+		FA2CA3B21E8A5D6E00F4A764 /* ExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3B11E8A5D6E00F4A764 /* ExercisesTableViewController.swift */; };
+		FA2CA3B41E8A627300F4A764 /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3B31E8A627300F4A764 /* DBController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		FA2CA3A81E8A564700F4A764 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FA2CA3A91E8A564700F4A764 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FA2CA3AA1E8A564700F4A764 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA2CA3B11E8A5D6E00F4A764 /* ExercisesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesTableViewController.swift; sourceTree = "<group>"; };
+		FA2CA3B31E8A627300F4A764 /* DBController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				FA2CA3841E8A558400F4A764 /* AppDelegate.swift */,
+				FA2CA3B31E8A627300F4A764 /* DBController.swift */,
 				FA2CA3861E8A558400F4A764 /* ViewController.swift */,
 				FA2CA3881E8A558400F4A764 /* Main.storyboard */,
+				FA2CA3B11E8A5D6E00F4A764 /* ExercisesTableViewController.swift */,
 				FA2CA3AF1E8A56BD00F4A764 /* Models */,
 				FA2CA3B01E8A56DB00F4A764 /* SupportFiles */,
 				FA2CA38B1E8A558400F4A764 /* MyFitness.xcdatamodeld */,
@@ -235,7 +241,9 @@
 			files = (
 				FA2CA3871E8A558400F4A764 /* ViewController.swift in Sources */,
 				FA2CA3AD1E8A564700F4A764 /* Workout+CoreDataClass.swift in Sources */,
+				FA2CA3B41E8A627300F4A764 /* DBController.swift in Sources */,
 				FA2CA38D1E8A558400F4A764 /* MyFitness.xcdatamodeld in Sources */,
+				FA2CA3B21E8A5D6E00F4A764 /* ExercisesTableViewController.swift in Sources */,
 				FA2CA3AC1E8A564700F4A764 /* Exercise+CoreDataProperties.swift in Sources */,
 				FA2CA3AE1E8A564700F4A764 /* Workout+CoreDataProperties.swift in Sources */,
 				FA2CA3851E8A558400F4A764 /* AppDelegate.swift in Sources */,
