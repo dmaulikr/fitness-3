@@ -20,5 +20,6 @@ extension Exercise {
     @NSManaged public var title: String?
     @NSManaged public var specification: String?
     @NSManaged public var pictureTitle: String?
+    @NSManaged public var workoutType: String?
 
 }

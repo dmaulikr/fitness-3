@@ -21,6 +21,7 @@
 		FA2CA3B21E8A5D6E00F4A764 /* ExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3B11E8A5D6E00F4A764 /* ExercisesTableViewController.swift */; };
 		FA2CA3B41E8A627300F4A764 /* DBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3B31E8A627300F4A764 /* DBController.swift */; };
 		FA2CA3B61E8A71A500F4A764 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3B51E8A71A500F4A764 /* ExerciseTableViewCell.swift */; };
+		FA2CA3B81E8BC18000F4A764 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2CA3B71E8BC18000F4A764 /* ExerciseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		FA2CA3B11E8A5D6E00F4A764 /* ExercisesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesTableViewController.swift; sourceTree = "<group>"; };
 		FA2CA3B31E8A627300F4A764 /* DBController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBController.swift; sourceTree = "<group>"; };
 		FA2CA3B51E8A71A500F4A764 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		FA2CA3B71E8BC18000F4A764 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				FA2CA3B31E8A627300F4A764 /* DBController.swift */,
 				FA2CA3861E8A558400F4A764 /* ViewController.swift */,
 				FA2CA3B11E8A5D6E00F4A764 /* ExercisesTableViewController.swift */,
+				FA2CA3B71E8BC18000F4A764 /* ExerciseViewController.swift */,
 				FA2CA3B51E8A71A500F4A764 /* ExerciseTableViewCell.swift */,
 				FA2CA3AF1E8A56BD00F4A764 /* Models */,
 				FA2CA3881E8A558400F4A764 /* Main.storyboard */,
@@ -244,6 +247,7 @@
 			files = (
 				FA2CA3871E8A558400F4A764 /* ViewController.swift in Sources */,
 				FA2CA3B61E8A71A500F4A764 /* ExerciseTableViewCell.swift in Sources */,
+				FA2CA3B81E8BC18000F4A764 /* ExerciseViewController.swift in Sources */,
 				FA2CA3AD1E8A564700F4A764 /* Workout+CoreDataClass.swift in Sources */,
 				FA2CA3B41E8A627300F4A764 /* DBController.swift in Sources */,
 				FA2CA38D1E8A558400F4A764 /* MyFitness.xcdatamodeld in Sources */,

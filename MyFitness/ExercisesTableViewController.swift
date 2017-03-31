@@ -9,13 +9,17 @@
 import UIKit
 import CoreData
 
+
+
 class ExercisesTableViewController: UITableViewController {
+    static var workoutType = ""
     
-    var exercises = [Exercise]?.self
-    
-    lazy var fetchResultsController: NSFetchedResultsController = { () -> NSFetchedResultsController<Exercise> in 
+    var exercises = [Exercise]()
+   
+    lazy var fetchResultsController: NSFetchedResultsController = { () -> NSFetchedResultsController<Exercise> in
         let fetchRequest: NSFetchRequest<Exercise> = Exercise.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title.date", ascending: false)]
+        fetchRequest.predicate = NSPredicate(format: "workoutType == %@", workoutType)
         let context = DBController.getContext()
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         return frc
@@ -23,7 +27,8 @@ class ExercisesTableViewController: UITableViewController {
     
         override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = ExercisesTableViewController.workoutType
+        
         do {
             try fetchResultsController.performFetch()
         } catch let error {
@@ -63,7 +68,35 @@ class ExercisesTableViewController: UITableViewController {
         
         return cell
     }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? ""){
+            
+        case "ShowDetails":
+            guard let exerciseDetailViewController = segue.destination as? ExerciseViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedExerciseCell = sender as? ExerciseTableViewCell else {
+                fatalError("Unexpected destination: \(sender)")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedExerciseCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedExercise = fetchResultsController.object(at: indexPath)
+            
+            exerciseDetailViewController.exercise = selectedExercise
+            
+            
+        default: fatalError("oOooOooOps")
+        }
+    }
+   
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -100,14 +133,10 @@ class ExercisesTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+
+ 
+
+
